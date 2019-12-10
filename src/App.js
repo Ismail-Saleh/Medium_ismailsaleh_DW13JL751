@@ -10,7 +10,7 @@ import Tes from './components/tes';
 function App() {
   return (
     <div className="App">
-        <Home />
+        <Modal />
     </div>
   );
 }
