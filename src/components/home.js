@@ -95,15 +95,7 @@ export default function Home() {
                     <IconButton color="primary" aria-label="upload picture" component="span">
                     <Search/>
                     </IconButton>
-                </Box>
-
-                <Box p={1}>
-                    <label htmlFor="outlined-button-file">
-                        <Button variant="outlined" component="span">
-                            Upload
-                        </Button>
-                    </label>
-                </Box>
+                </Box>                
                 <Box p={1}>
                     <Avatar className={classes.purple}>OP</Avatar>
                 </Box>

@@ -4,7 +4,20 @@ import { deepOrange, deepPurple } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 import {  Search,NotificationsNone,ArrowForward} from '@material-ui/icons';
 import TopMid from './topMid';
+import TopLeft from './topLeft';
+import TopRight from './topRight';
 
+const topLeft=[  
+    {
+        img:"https://cdn-images-1.medium.com/focal/416/151/59/53/1*gUoANPVUnpV-5hNg2HRX5Q.png",
+        title:'A Nude "Playboy Has Been a Mainstay in Testing Tech For Decades"',
+        detail:'The documentary ‘Losing Lena’ is about the many small ways in which women are told they don’t belong in tech',
+        name :'Caroline',
+        from :'One Zero',
+        date :'Nov 26',
+        time :'6 min read'
+    },
+]
 
 const topMid =[
     {
@@ -33,6 +46,17 @@ const topMid =[
         from : 'One Zero',
         date : 'Nov 26',
         time : '6 min read'
+    },
+]
+const topRight=[
+    {
+        id  : 1,
+        img : 'https://cdn-images-1.medium.com/fit/c/504/222/1*5_JyY0t-JubQJkSgCM9WpQ.jpeg',
+        title : 'Do not fall in love with a smart, introverted man',
+        name :'Caroline Zoe',
+        from : 'Better Human',
+        date : 'Des 01',
+        time : '5 min read',
     },
 ]
 
@@ -124,8 +148,24 @@ export default function Top(){
                 
                 
             </Box>
-            <Box  order={3} bgcolor="">
-            <a href="#">
+
+            {topRight.map(item=>
+                <TopRight
+                
+                img ={item.img}
+                title ={item.title}
+                name ={item.name}
+                from ={item.from}
+                date ={item.date}
+                time ={item.tine}
+
+                />
+                
+            
+            )}
+
+            {/* <Box  order={3} bgcolor="">
+                <a href="#">
                             <img src='https://cdn-images-1.medium.com/fit/c/504/222/1*5_JyY0t-JubQJkSgCM9WpQ.jpeg' className={classes.img}></img>
                         </a><br/>
                     <Box display="flex" bgcolor="background.paper" flexDirection='column' style={{float:'left',marginLeft:'18px'}}>      
@@ -146,27 +186,21 @@ export default function Top(){
                             
                         </Box>
                     </Box>
-            </Box>
-            <Box  order={1} bgcolor="" >
-            
-                        <a href="#">
-                            <img src='https://cdn-images-1.medium.com/focal/416/151/59/53/1*gUoANPVUnpV-5hNg2HRX5Q.png'></img>
-                        </a><br/>
-                    <Box display="flex" bgcolor="background.paper" flexDirection='column'>      
-                        <Box order={1} bgcolor="" >
-                            <a href='#'><Typography variant='h6' className={classes.flex1}>A Nude 'Playboy Has Been a Mainstay in Testing Tech For Decades'</Typography> </a>
-                        </Box>
-                        <Box order={1} pl={2} pb={2}>
-                            <p className='penjelasan'>The documentary ‘Losing Lena’ is about the many small ways in which women are told they don’t belong in tech</p>
-                        </Box>
-                        <Box order={1} bgcolor="" >
-                            <p className={classes.pFlex}><a href='' className={classes.p}>Caroline </a> in <a href='' className={classes.p} >One Zero</a> </p>
-                        </Box>
-                        <Box order={1} bgcolor="" >
-                            <div><p className={classes.pFlex}><a className={classes.month}>Nov 26</a> . <a className={classes.month}>6 min read</a> </p></div>
-                        </Box>
-                    </Box>                    
-            </Box>  
+            </Box> */}
+
+            {topLeft.map(item=>
+                <TopLeft
+                img={item.img}
+                title={item.title}
+                detail={item.detail}
+                name ={item.name}
+                from ={item.from}
+                date ={item.date}
+                time ={item.time}
+
+                />    
+            )}
+
                          
     </Box>
     </div>
