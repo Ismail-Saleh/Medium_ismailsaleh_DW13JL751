@@ -3,10 +3,10 @@ import {Box, Typography} from '@material-ui/core/'
 import { deepOrange, deepPurple } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 import {  Search,NotificationsNone,ArrowForward} from '@material-ui/icons';
-import TopLeft from './topLeft';
+import TopMid from './topMid';
 
 
-const topLeft =[
+const topMid =[
     {
         id:1,
         img :'https://cdn-images-1.medium.com/focal/100/100/45/68/1*T_wCY9dpnq1jw-AM7BzZ2w.jpeg',
@@ -107,9 +107,9 @@ export default function Top(){
             <Box pl={3} order={2} bgcolor="">
                 
 
-                {topLeft.map(item=>
+                {topMid.map(item=>
                     
-                    <TopLeft
+                    <TopMid
 
                     img ={item.img}
                     title ={item.title}
