@@ -1,14 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {AppBar,Box,Tabs,Tab,Container,Typography} from '@material-ui/core/';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import Avatar from '@material-ui/core/Avatar';
+import {Avatar,IconButton,Button,Toolbar ,AppBar,Box,Tabs,Tab,Container,Typography} from '@material-ui/core/';
 import { deepOrange, deepPurple } from '@material-ui/core/colors';
 import {  Search,NotificationsNone,ArrowForward} from '@material-ui/icons';
-import Btm from './btmPane';
-import Top from './topPane'
+import Btm from './btmPaneX';
+import Top from './topPaneX';
+import Link from 'react-router-dom'
+import Navbar from '../navbar/navbar';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -95,15 +93,7 @@ export default function Home() {
                     <IconButton color="primary" aria-label="upload picture" component="span">
                     <Search/>
                     </IconButton>
-                </Box>
-
-                <Box p={1}>
-                    <label htmlFor="outlined-button-file">
-                        <Button variant="outlined" component="span">
-                            Upload
-                        </Button>
-                    </label>
-                </Box>
+                </Box>                
                 <Box p={1}>
                     <Avatar className={classes.purple}>OP</Avatar>
                 </Box>
@@ -111,26 +101,11 @@ export default function Home() {
         </div>
         </Toolbar>
       </AppBar>
+   
+   <Container>
+  
+   <Navbar/>
 
-  <Container>
-  <Tabs
-        value={0}
-        indicatorColor="primary"
-        textColor="primary"
-        aria-label="disabled tabs example"
-      >
-    <Tab label="Home" />
-    <Tab label="OneZero" />
-    <Tab label="Elemenal" />
-    <Tab label="Gen" />
-    <Tab label="Zora" />
-    <Tab label="Forga" />
-    <Tab label="Human  parts" />
-    <Tab label="maker" />
-    <Tab label="level" />
-    <Tab label="heted" />
-    <Tab label="modus" />
-  </Tabs>
   </Container>
 
 </div>

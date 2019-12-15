@@ -10,10 +10,9 @@ import { Typography,TextField, Container,Grid} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     paper: {
-      marginTop: theme.spacing(8),
+   
       display: 'flex',
       flexDirection: 'row',
-      alignItems: 'center',
       width:'100%',
       height:'100%',
   
@@ -22,7 +21,7 @@ const useStyles = makeStyles(theme => ({
         paddingLeft:'30px',
     },
     avatar: {
-      margin: theme.spacing(1),
+     
       backgroundColor: theme.palette.secondary.main,
     },
     btn:{
@@ -63,6 +62,7 @@ const useStyles = makeStyles(theme => ({
       '& > *': {
         margin: theme.spacing(1),
         width: 400,
+        border:'1px solid red'
       },
     },
   }));

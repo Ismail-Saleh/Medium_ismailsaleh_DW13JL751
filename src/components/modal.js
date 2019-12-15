@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Container,Fade,Modal,Backdrop} from '@material-ui/core/';
-import Dialog from './Dialog'
-
+import Dialog from './register/Dialog';
+import Login from './login'
 
 
 const useStyles = makeStyles(theme => ({
@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    maxWidth:700,
+    maxWidth:900,
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme => ({
     
   },
 }));
-
 export default function TransitionsModal() {
+    
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 

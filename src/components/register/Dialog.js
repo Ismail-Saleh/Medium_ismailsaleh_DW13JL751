@@ -2,13 +2,13 @@ import React from 'react';
 import {Button,CssBaseline,TextField} from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 import Img from 'react-image';
-import kiri from '../../src/1.png';
-import kanan from '../../src/2.png';
+import kiri from '../../../src/1.png';
+import kanan from '../../../src/2.png';
 
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(0),
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -83,7 +83,7 @@ export default function SignIn() {
 
       <div className='texts'>
             <Button variant="contained" className={classes.btn}>Registration</Button>
-            <p className={classes.p}><b>Do You Have Account ? <a href="" onClick={handleOpen}>Sign-In</a></b></p>
+            <p className={classes.p}><b>Do You Have Account ? <a>Sign-In</a></b></p>
       </div>
       
         <div className='texts'>
