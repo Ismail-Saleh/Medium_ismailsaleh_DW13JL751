@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Avatar,IconButton,Button,Toolbar ,AppBar,Box,Tabs,Tab,Container,Typography} from '@material-ui/core/';
 import { deepOrange, deepPurple } from '@material-ui/core/colors';
 import {  Search,NotificationsNone,ArrowForward} from '@material-ui/icons';
-import Btm from './btmPaneX';
-import Top from './topPaneX';
+import Btm from './btmPane';
+import Top from './topPane';
 import Link from 'react-router-dom'
 import Navbar from '../navbar/navbar';
 

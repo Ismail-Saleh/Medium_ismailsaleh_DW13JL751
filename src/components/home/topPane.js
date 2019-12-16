@@ -160,7 +160,7 @@ export default function Top(){
                 from ={item.from}
                 date ={item.date}
                 time ={item.tine}
-
+                url  ={item.url}
                 />
                 
             

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Nav from './navbar/nav'
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { Avatar, IconButton, Grid, Button, Toolbar, AppBar, Box, Link, Tab, Container, Typography } from '@material-ui/core/';
 import { deepOrange, deepPurple } from '@material-ui/core/colors';
 import { Search, NotificationsNone,Facebook,Twitter,Bookmark } from '@material-ui/icons';
 import Navbar from './navbar/nav'
+import Follow from './follow'
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
+        
     },
     brand: {
         textAlign: "left",
@@ -25,6 +27,16 @@ const styles = theme => ({
         color: '#fff',
         backgroundColor: deepPurple[500],
     },
+    paragraf:{
+    fontSize:22,
+    lineHeight:'200%' ,
+    paddingTop: '30px', 
+    textAlign:'justify', 
+    fontFamily:'edium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif',
+    [theme.breakpoints.down('sm')]: {
+        fontSize:14
+    }
+    }
 });
 
 class ArtDetail extends Component {
@@ -141,7 +153,7 @@ class ArtDetail extends Component {
 
                         </Grid>
 
-                        <Grid md={8} style={{ fontSize:22,lineHeight:'200%' ,paddingTop: '30px', textAlign:'justify', fontFamily:'edium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif'}}>
+                        <Grid md={8} className={classes.paragraf}>
                 
                             <Typography variant='p' content='p'>
                             If you’d liked <Link To=''>to be jerked around less</Link>, provoked less, and <Link to=''>more productive and inwardly focused</Link>, where should you start?<br/>
@@ -162,9 +174,16 @@ class ArtDetail extends Component {
 
                         </Grid>
 
+                        
+
 
                     </Grid>
-
+                    <Grid container direction='row' justify="center"
+                        alignItems="center">
+                    <Grid container md={8} style={{ paddingTop: '30px' }}>
+                            <Follow/>
+                        </Grid>
+                    </Grid>
                 </Container>
             </div>
         );
