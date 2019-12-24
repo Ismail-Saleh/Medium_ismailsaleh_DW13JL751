@@ -76,7 +76,9 @@ const useStyles = makeStyles(theme => ({
 
 function BtmList (props) {
     const classes = useStyles();
+   
         return (
+            
             <Box display='flex' pb={3} flexShrink={2}>
                 <Box>
                     <Typography variant='h4' style={{ color: '#dfdfdf' }}>{props.number}</Typography>

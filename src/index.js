@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Zero from './components/home/onezero'
 import Nude from './components/artdetail';
+import Comments from './components/comment';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 ReactDOM.render(
@@ -14,6 +15,7 @@ ReactDOM.render(
                 <Route exact path="/" component={App} />
                 <Route exact path="/onezero" component={Zero} />
                 <Route exact path="/nude" component={Nude} />
+                <Route exact path="/comments" component={Comments} />
            </Switch>
             
         </div>

@@ -5,6 +5,7 @@ import { deepOrange, deepPurple } from '@material-ui/core/colors';
 import { Search, MoreHoriz, Facebook, Twitter, Bookmark } from '@material-ui/icons';
 
 
+
 const styles = theme => ({
     root: {
         flexGrow: 1,
@@ -156,7 +157,9 @@ class Follow extends Component {
                         alignItems="center"
                         style={{marginBottom:'40px'}}
                 >
-                            <Button style={{width:'100%',height:'60px',borderColor:'#02B875',color:'#02B875'}} variant="outlined">Default</Button>
+                <Link>
+                    <Button style={{width:'100%',height:'60px',borderColor:'#02B875',color:'#02B875'}} variant="outlined">Default</Button>
+                </Link>
 
                 </Grid>
             </div>

@@ -3,15 +3,16 @@ import './App.css';
 import Modal from './components/modal';
 // import Home from './components/home';
 import Login from './components/login';
-import Tes from './components/percobaan/testBreakpoint';
+import Top from './components/navbar/navbarfix';
 import Home from './components/home/home'
+import Tes from './components/comment'
 
 
 
 function App() {
   return (
     
-        <Home/>
+        <Tes/>
     
   );
 }

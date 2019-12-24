@@ -5,59 +5,59 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import {Box} from '@material-ui/core/';
-import {Link} from 'react-router-dom';
+import { Box } from '@material-ui/core/';
+import { Link } from 'react-router-dom';
 
-const tab=[
+const tab = [
   {
-    name :'Home',
-    url  : '/home'
+    name: 'Home',
+    url: '/home'
   },
   {
-    name :'One Zero',
-    url  : '/onezero'
+    name: 'One Zero',
+    url: '/onezero'
   },
   {
-    name :'Elemenal',
-    url  : '/elemenal'
+    name: 'Elemenal',
+    url: '/elemenal'
   },
   {
-    name :'Gen',
-    url  : '/onezero'
+    name: 'Gen',
+    url: '/onezero'
   },
   {
-    name :'Zora',
-    url  : '/onezero'
+    name: 'Zora',
+    url: '/onezero'
   },
   {
-    name :'Forge',
-    url  : '/onezero'
+    name: 'Forge',
+    url: '/onezero'
   },
   {
-    name :'humman part',
-    url  : '/onezero'
+    name: 'humman part',
+    url: '/onezero'
   },
   {
-    name :'marker',
-    url  : '/onezero'
+    name: 'marker',
+    url: '/onezero'
   },
   {
-    name :'level',
-    url  : '/onezero'
+    name: 'level',
+    url: '/onezero'
   },
   {
-    name :'heated',
-    url  : '/onezero'
+    name: 'heated',
+    url: '/onezero'
   },
   {
-    name :'ZerrOne',
-    url  : '/onezero'
+    name: 'ZerrOne',
+    url: '/onezero'
   },
   {
-    name :'ZerrOne',
-    url  : '/onezero'
+    name: 'ZerrOne',
+    url: '/onezero'
   },
-  
+
 ]
 
 
@@ -108,7 +108,7 @@ export default function ScrollableTabsButtonAuto() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default" style={{background:'#fff',boxShadow:'none'}}>
+      <AppBar position="static" color="default" style={{ background: '#fff', boxShadow: 'none' }}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -118,29 +118,15 @@ export default function ScrollableTabsButtonAuto() {
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          {tab.map(item=>
-            <Link to={item.url}>
-              <Tab  label={item.name} />
+          {tab.map(item =>
+            <Link to='/'{item.url}>
+              <Tab label={item.name} />
             </Link>
-          )
-
-          }
-          {/* <Tab label="Home"/>
-          <Tab label="One Zero"/>
-          <Tab label="" {...a11yProps(2)} />
-          <Tab label="" {...a11yProps(3)} />
-          <Tab label="Zora" {...a11yProps(4)} />
-          <Tab label="Forge" {...a11yProps(5)} />
-          <Tab label="Human Part" {...a11yProps(6)} />
-          <Tab label="MArker" {...a11yProps(7)} />
-          <Tab label="Level" {...a11yProps(8)} />
-          <Tab label="Heated" {...a11yProps(9)} />
-          <Tab label="Modus" {...a11yProps(10)} />
-          <Tab label="More" {...a11yProps(10)} /> */}
+          )}
         </Tabs>
       </AppBar>
-      
-      
+
+
     </div>
   );
 }

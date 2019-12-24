@@ -1,102 +1,61 @@
-import React from 'react';
+import React, { Component } from 'react'
+import { withStyles } from '@material-ui/core/styles'
 import { Box, Typography, IconButton } from '@material-ui/core/'
-import { makeStyles } from '@material-ui/core/styles';
-import { deepOrange, deepPurple } from '@material-ui/core/colors';
-import BookmarkBorderSharpIcon from '@material-ui/icons/BookmarkBorderSharp';
-import MoreHorizSharpIcon from '@material-ui/icons/MoreHorizSharp';
-import { MoreHoriz } from '@material-ui/icons';
-import BtmList from './contents/BtmList';
-import Btmkiri from './BtmKr'
-
-const btm = [
-    {
-        id: 1,
-        number: '01',
-        title: 'lorem ipsum dolor set amet',
-        name: 'Sílvia Bastos',
-        loc: 'Better Human',
-        date: '26 Desember',
-        time: '6 min read'
-    },
-    {
-        id: 2,
-        number: '02',
-        title: 'Stop Obsessing About Focus: Here’s What Your Mind Really Needs',
-        name: 'Sílvia Bastos',
-        loc: 'Better Human',
-        date: '26 Desember',
-        time: '6 min read'
-    },
-    {
-        id: 3,
-        number: '03',
-        title: 'Stop Obsessing About Focus: Here’s What Your Mind Really Needs',
-        name: 'Sílvia Bastos',
-        loc: 'Better Human',
-        date: '26 Desember',
-        time: '6 min read'
-    },
-    {
-        id: 4,
-        number: '04',
-        title: 'Stop Obsessing About Focus: Here’s What Your Mind Really Needs',
-        name: 'Sílvia Bastos',
-        loc: 'Better Human',
-        date: '26 Desember',
-        time: '6 min read'
-    },
-]
-
-const btmKiri = [
-    {
-        id: 1,
-        category: 'Education',
-        title: 'How to Tell if Someone Values You',
-        detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
-        name: 'Caroline ',
-        from: 'One Zero',
-        date: 'Nov 26',
-        time: '6 min read',
-        img : 'https://cdn-images-1.medium.com/fit/c/152/156/1*YMO8ko10TpWBSyIwPqBxLA.jpeg'
-    },
-    {
-        id: 2,
-        category: 'Education',
-        title: 'How to Tell if Someone Values You',
-        detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
-        name: 'Caroline ',
-        from: 'One Zero',
-        date: 'Nov 26',
-        time: '6 min read',
-        img : 'https://cdn-images-1.medium.com/fit/c/152/156/1*_-a96T1bGeRU8nE1-861rA.jpeg'
-    },
-    {
-        id: 3,
-        category: 'Education',
-        title: 'How to Tell if Someone Values You',
-        detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
-        name: 'Caroline ',
-        from: 'One Zero',
-        date: 'Nov 26',
-        time: '6 min read',
-        img : 'https://cdn-images-1.medium.com/fit/c/152/156/0*ZxYqC36-y74gbed5'
-    },
-    {
-        id: 4,
-        category: 'Education',
-        title: 'How to Tell if Someone Values You',
-        detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
-        name: 'Caroline ',
-        from: 'One Zero',
-        date: 'Nov 26',
-        time: '6 min read',
-        img : 'https://cdn-images-1.medium.com/fit/c/152/156/0*r-2l4UXr7gI99vWV'
-    }
-]
+import { deepOrange, deepPurple } from '@material-ui/core/colors'
+import BtmList from './contents/BtmList'
+import Btmkiri from './BtmKrfix'
+import Axios from 'axios'
 
 
 
-const useStyles = makeStyles(theme => ({
+// const btmKiri = [
+//     {
+//         id: 1,
+//         category: 'Education',
+//         title: 'How to Tell if Someone Values You',
+//         detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
+//         name: 'Caroline ',
+//         from: 'One Zero',
+//         date: 'Nov 26',
+//         time: '6 min read',
+//         img : 'https://cdn-images-1.medium.com/fit/c/152/156/1*YMO8ko10TpWBSyIwPqBxLA.jpeg'
+//     },
+//     {
+//         id: 2,
+//         category: 'Education',
+//         title: 'How to Tell if Someone Values You',
+//         detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
+//         name: 'Caroline ',
+//         from: 'One Zero',
+//         date: 'Nov 26',
+//         time: '6 min read',
+//         img : 'https://cdn-images-1.medium.com/fit/c/152/156/1*_-a96T1bGeRU8nE1-861rA.jpeg'
+//     },
+//     {
+//         id: 3,
+//         category: 'Education',
+//         title: 'How to Tell if Someone Values You',
+//         detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
+//         name: 'Caroline ',
+//         from: 'One Zero',
+//         date: 'Nov 26',
+//         time: '6 min read',
+//         img : 'https://cdn-images-1.medium.com/fit/c/152/156/0*ZxYqC36-y74gbed5'
+//     },
+//     {
+//         id: 4,
+//         category: 'Education',
+//         title: 'How to Tell if Someone Values You',
+//         detail: 'The endearing popularity of nineties icon, actor Keanu Reeves, has spiked in recent months. The summation would be that in this jarring',
+//         name: 'Caroline ',
+//         from: 'One Zero',
+//         date: 'Nov 26',
+//         time: '6 min read',
+//         img : 'https://cdn-images-1.medium.com/fit/c/152/156/0*r-2l4UXr7gI99vWV'
+//     }
+// ]
+
+const styles = theme => ({
     root: {
         flexGrow: 1,
     },
@@ -162,13 +121,43 @@ const useStyles = makeStyles(theme => ({
         color: '#fff',
         backgroundColor: deepPurple[500],
     },
-}));
+});
 
 
-export default function Btm() {
-    const classes = useStyles();
-    return (
-        <div style={{ width: '100%' }}>
+class BtmPanefix extends Component {
+
+    constructor(){
+        super();
+        this.state={
+            articles:[],
+            popular:[]
+        }
+    }
+
+
+    componentDidMount(){
+
+        Axios.get('http://localhost:5000/api/v1/populars').then(res=>{
+        const popular = res.data;
+        this.setState({popular})
+        console.log(popular);
+    })
+
+
+
+        Axios.get('http://localhost:5000/api/v1/articles').then(res=>{
+            const articles=res.data;
+            this.setState({articles});
+            console.log(articles);
+            console.log(res);
+        }).catch(err=>{console.log('error');
+        })
+    }
+    render() {
+        let numb = 1;
+        const { classes } = this.props;
+        return (
+            <div style={{ width: '100%' }}>
             <Box display='flex' style={{ width: '100%' }} pl={10}>
 
                 <Box>
@@ -177,10 +166,10 @@ export default function Btm() {
                     <hr style={{ border: '1px solid #d9d9d9' }} />
 
 
-                    {btm.map(item =>
+                    {this.state.popular.map(item =>
                         <BtmList
-                            number={item.number}
                             title={item.title}
+                            number={numb++}
                             name={item.name}
                             loc={item.loc}
                             date={item.date}
@@ -199,17 +188,15 @@ export default function Btm() {
                 </Box>
                 <Box>
 
-                    {btmKiri.map(item =>
+                    {this.state.articles.map(item =>
 
                         <Btmkiri
-                            category={item.category}
+                           
                             title={item.title}
-                            detail={item.detail}
-                            name={item.name}
-                            from={item.from}
-                            date={item.date}
-                            time={item.time}
-                            img={item.img}
+                            img  ={item.image}
+                            content ={item.content}
+                            // name ={item.authorName.fullname}
+                            date = {item.createdAt}
 
                         />
 
@@ -217,7 +204,8 @@ export default function Btm() {
                 </Box>
             </Box>
         </div>
-    );
-
-
+        );
+    }
 }
+
+export default withStyles(styles)(BtmPanefix);

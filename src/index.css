@@ -17,7 +17,9 @@
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
-  
+  .abc{
+    background: #6A0BFF
+  }
   .zeroimg{
     width: 310px;
     height: auto;
@@ -49,4 +51,13 @@
     color: black!important;
   }
   
+.textarea{
+ width: 100%;
+ border: transparent;
+}
+.border{
+  width: '90px';
+  height: '2px';
+  background: grey
+}
   
