@@ -158,7 +158,7 @@ class Follow extends Component {
                         style={{marginBottom:'40px'}}
                 >
                 <Link>
-                    <Button style={{width:'100%',height:'60px',borderColor:'#02B875',color:'#02B875'}} variant="outlined">Default</Button>
+                    <Button style={{width:'900px'}} variant="outlined">See Response (18)</Button>
                 </Link>
 
                 </Grid>

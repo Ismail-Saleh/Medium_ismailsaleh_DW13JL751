@@ -6,6 +6,7 @@ import { deepOrange, deepPurple } from '@material-ui/core/colors';
 import { Search, NotificationsNone,Facebook,Twitter,Bookmark } from '@material-ui/icons';
 import Navbar from './navbar/nav'
 import Follow from './follow'
+import Related from './relatedArticle'
 
 const styles = theme => ({
     root: {
@@ -172,19 +173,61 @@ class ArtDetail extends Component {
                             <Link to='' className={classes.bold}>The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life by Mark Manson</Link> To me, practical philosophy has always been the art knowing what to — and what not to — give a fuck about. That’s what Mark’s book is about. It’s not about apathy. It’s about cultivating indifference to things that don’t matter. Be careful, as Marcus Aurelius warns, not to give the little things more time and thought they deserved. Maybe looking back at this year reveals how much effort you’ve frittered away worrying about the trivial. If so, let 2018 be a year that you only devote energy to things that truly matter — get the important things right by ignoring the insignificant.   
                             </Typography>
 
-                        </Grid>
-
-                        
-
-
+                        </Grid>           
                     </Grid>
-                    <Grid container direction='row' justify="center"
-                        alignItems="center">
-                    <Grid container md={8} style={{ paddingTop: '30px' }}>
-                            <Follow/>
+                    <Grid container direction='row' justify="center" alignItems="center" style={{ marginTop: '90px'}}>
+                        <Grid container md={12} style={{ paddingTop: '90px'}}>
+                            <Follow />
                         </Grid>
                     </Grid>
+                    
+                    <Grid container direction='row' justify="center"alignItems="center">
+                        <Grid md={12} style={{ paddingTop: '30px' }}>
+
+                            <div style={{marginTop:'20px'}}>
+                                <Related/>
+                            </div>
+
+                        </Grid>
+                    </Grid>
+                    
                 </Container>
+                <Grid  md={12}style={{background:'#191919',padding:'60px',paddingLeft:'190px'}}>
+                    <Grid md={11}>
+                        <Box display='flex' >
+                                <Box flexGrow={1} style={{color:'white'}}>
+                                    <Typography variant='h5' color='inherit'>Discover Medium</Typography>
+                                    <p style={{color:'white'}}>Follow all the topics you care about, and we’ll deliver the best stories for you to your homepage and inbox.</p>
+                                </Box>
+                                <Box flexGrow={1} style={{color:'white'}}>
+                                    <Typography variant='h5' color='textSecondary' color='inherit'>Make Medium Yours</Typography>
+                                    <p style={{color:'white'}}>
+                                    Follow all the topics you care about, and we’ll deliver the best stories for you to your homepage and inbox.
+                                    </p>
+                                </Box>
+                                <Box flexGrow={1} style={{color:'white'}}>
+                                    <Typography variant='h5' color='textSecondary' color='inherit'>Become a Member</Typography>
+                                    <p style={{color:'white'}}>
+                                        Follow all the topics you care about, and we’ll deliver the best stories for you to your homepage and inbox.
+                                    </p>
+                                </Box>
+                        </Box>
+                    </Grid>
+                </Grid>
+
+                <Grid md={12}style={{background:'#191919',paddingLeft:'190px'}}>
+                    <Grid md={11}>
+                        <Box display='flex'>
+                            <Box flexGrow={1} className={classes.brand} style={{color:'white'}}>
+                                Medium
+                            </Box>
+                            <Box>About</Box>
+                            <Box>Help</Box>
+                            <Box>Legal</Box>
+                        </Box>
+                    </Grid>
+                </Grid>
+                
             </div>
         );
     }

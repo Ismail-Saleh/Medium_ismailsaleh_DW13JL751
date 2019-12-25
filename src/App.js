@@ -5,7 +5,7 @@ import Modal from './components/modal';
 import Login from './components/login';
 import Top from './components/navbar/navbarfix';
 import Home from './components/home/home'
-import Tes from './components/comment'
+import Tes from './components/artdetail'
 
 
 
