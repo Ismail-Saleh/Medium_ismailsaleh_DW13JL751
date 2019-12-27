@@ -4,7 +4,7 @@ import Modal from './components/modal';
 // import Home from './components/home';
 import Login from './components/login';
 import Top from './components/navbar/navbarfix';
-import Home from './components/story/newStory'
+import Home from './components/story/story'
 // import Tes from './components/artdetail'
 import Zero from './components/home/onezero'
 import Nude from './components/artdetail';
